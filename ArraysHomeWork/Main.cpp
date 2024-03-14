@@ -39,13 +39,13 @@ void main()
 
 	//Среднее-арифметическое
 	cout << "Среднее-арифметическое значение элементов: "
-		<< sum / SIZE << endl;
+		<< (double)sum / SIZE << endl;
 
 	//Мин. и макс. значения
 	int max, min;
 	max = arr[0];
 	min = arr[0];
-	for (int i = 1; i < SIZE; i++)
+	for (int i = 0; i < SIZE; i++)
 	{
 		if (max < arr[i]) max = arr[i];
 		if (min > arr[i]) min = arr[i];
