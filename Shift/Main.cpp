@@ -18,7 +18,7 @@ void main()
 
 	//Сдвиг массива:
 	int shift;
-	cout << "Введите количество сдвигов: "; cin >> shift;	
+	cout << "Введите количество сдвигов: "; cin >> shift;
 	for (int i = 0; i < shift; i++)
 	{
 		int temp = arr[0];
@@ -28,11 +28,11 @@ void main()
 		}
 		arr[n - 1] = temp;
 
-	//Вывод сдвинутого массива на экран:
-	for (int i = 0; i < n; i++)
+		//Вывод сдвинутого массива на экран:
+		for (int i = 0; i < n; i++)
 		{
-		cout << arr[i] << tab;
+			cout << arr[i] << tab;
 		}
-	cout << endl;
-	}
+		cout << endl;
+	}	
 }
