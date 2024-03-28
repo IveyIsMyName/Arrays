@@ -35,6 +35,7 @@ void main()
 const int MAX_HEX_CAPACITY = 8;
 char hex[MAX_HEX_CAPACITY] = {};
 int i = 0;
+
 for (; decimal; i++)
 {
 	hex[i] = decimal % 16; // получаем младший разряд и сохраняем
@@ -46,8 +47,9 @@ for (--i; i >= 0; i--)
 		cout << (int)hex[i];
 	else 
 		cout << char(hex[i] + 55);*/
-	
-	hex[i] < 10 ? cout << (int)hex[i] : cout << char(hex[i] + 55);
+	//hex[i] < 10 ? cout << (int)hex[i] : cout << char(hex[i] + 55);
+	//cout << char(hex[i] < 10 ? hex[i] + 48 : hex[i] + 55);
+	cout << char(hex[i] < 10 ? hex[i] + '0' : hex[i] + 'A' - 10);
 }
 cout << endl;
 #endif // DEC_2_HEX
