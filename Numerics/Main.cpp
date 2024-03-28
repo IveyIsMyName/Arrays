@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 using std::cin;
 using std::cout;
@@ -11,7 +11,7 @@ void main()
 	setlocale(LC_ALL, "");
 	int decimal;
 
-	cout << "Ââåäèòå äåñÿòè÷íîå ÷èñëî: "; cin >> decimal;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÑÑÑ‚Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> decimal;
 #ifdef DEC_2_BIN
 	const int MAX_CAPACITY = 32;
 	bool binary[MAX_CAPACITY]{};
@@ -37,8 +37,8 @@ char hex[MAX_HEX_CAPACITY] = {};
 int i = 0;
 for (; decimal; i++)
 {
-	hex[i] = decimal % 16; // ïîëó÷àåì ìëàäøèé ðàçðÿä è ñîõðàíÿåì
-	decimal /= 16;		   // óáèðàåì ìëàäøèé øåñòíàäöàòåðèÿíûé ðàçðÿä èç äåñÿòè÷íîãî ÷èñëà
+	hex[i] = decimal % 16; // Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ð¼Ð»Ð°Ð´ÑˆÐ¸Ð¹ Ñ€Ð°Ð·Ñ€ÑÐ´ Ð¸ ÑÐ¾Ñ…Ñ€Ð°Ð½ÑÐµÐ¼
+	decimal /= 16;		   // ÑƒÐ±Ð¸Ñ€Ð°ÐµÐ¼ Ð¼Ð»Ð°Ð´ÑˆÐ¸Ð¹ ÑˆÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÐµÑ€Ð¸ÑÐ½Ñ‹Ð¹ Ñ€Ð°Ð·Ñ€ÑÐ´ Ð¸Ð· Ð´ÐµÑÑÑ‚Ð¸Ñ‡Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°
 }
 for (--i; i >= 0; i--)
 {
