@@ -4,6 +4,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 #define tab "\t"
+//#define UNIQUE_1
 
 void main()
 {
@@ -12,6 +13,7 @@ void main()
 	const int n = 10;
 	int arr[n];
 
+#ifdef UNIQUE_1
 	bool sameValue;
 	for (int i = 0; i < n; )
 	{
@@ -23,7 +25,7 @@ void main()
 			{
 				sameValue = true;
 				break; //прекращает поиск, так как одинаковое значение было найдено
-			}		
+			}
 		}
 		if (sameValue != true) //добавляет значение только при условии, что оно в предыдущих элементах не встречается
 		{
@@ -32,7 +34,28 @@ void main()
 		}
 	}
 
+#endif // UNIQUE_1
 
+	//Заполнение массива уникальными случайными числами:
+	for (int i = 0; i < n; i++)
+	{
+		bool unique;
+		do
+		{
+			arr[i] = rand() % n;
+			unique = true;
+			for (int j = 0; j < i; j++)
+			{
+				if (arr[i] == arr[j])
+				{
+					unique = false;
+					break;
+				}
+			}
+		} while (!unique);
+	}
+
+	//Вывод массива на экран:
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << tab;

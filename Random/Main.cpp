@@ -14,10 +14,16 @@ void main()
 	int minRand, maxRand;
 	do
 	{
+		system("CLS"); //функция system() позволяет вызвать любую команду командной строки (консоли)
+					   //Команда "CLS" (Clear Screen) - очищает окно консоли
 		cout << "Введите минимальное случайное число: "; cin >> minRand;
 		cout << "Введите максимальное случайное число: "; cin >> maxRand;
-		if (minRand >= maxRand)	cout << "Ошибка. Введите корректные значения: " << endl;
-	} while (minRand >= maxRand);
+		if (minRand >= maxRand)	
+		{ 
+			std::cerr << "Ошибка. Введите корректные значения: " << endl;
+			system("PAUSE"); //Команда "PAUSE" приостанавливает выполнение программы до нажатия любой клавиши
+		} 
+	}	while (minRand >= maxRand);
 
 	//заполнение массива случайными числами:
 	for (int i = 0; i < n; i++)
@@ -45,11 +51,9 @@ void main()
 				arr[i] = arr[j];
 				arr[j] = buffer;
 			}
-		}			
-		
+		}					
 	}
 
-	
 	//вывод отсортированного массива на экран
 	for (int i = 0; i < n; i++)
 	{
